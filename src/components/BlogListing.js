@@ -36,7 +36,7 @@ const BlogListing = () => {
   else
     return (
       <>
-        <h1 className="blogs__title">Our blogs</h1>
+        <h1 className="blogs__title">Flower Pot blogs</h1>
         <ul className="blogs">
           {items.map((item) => (
             <li className="blog-card" key={item.sys.id}>
