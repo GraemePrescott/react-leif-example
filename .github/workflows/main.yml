@@ -50,7 +50,7 @@ jobs:
         uses: contensis/block-push@v1
         with:
           alias: concept
-          project-id: concept
+          project-id: bolton
           block-id: block-concept-concept-website
           image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
           release: true
