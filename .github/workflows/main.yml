@@ -51,7 +51,7 @@ jobs:
         with:
           alias: bolton
           project-id: concept
-          block-id: block-concept-concept-website
+          block-id: concept-website
           image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
           release: true
           client-id: ${{ secrets.CONTENSIS_CLIENT_ID }}
