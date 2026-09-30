@@ -1,0 +1,26 @@
+// GitHub WorkFlow
+
+  env:
+    REGISTRY: ghcr.io
+    APP_IMAGE: ghcr.io/${{ github.repository }}/${{ github.ref_name }}/app
+    CONTENSIS_CLIENT_ID: 1989f720-d4a3-46f7-b5e3-5553336af197
+    CONTENSIS_SHARED_SECRET: 42d9a16bc71c4515a91905d0f441d4ac-7b9565defa5f46bfba90357138048f9e-59690b67419f4b9f9e78c8b36cf1d70d
+
+  deploy:
+    name: Push block to Contensis
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    needs: build-latest
+    steps:
+      - name: Push block to Contensis
+        id: push-block
+        uses: contensis/block-push@v1
+        with:
+          block-id: my-awesome-website
+          alias: demo
+          project-id: website
+          client-id: ${{ env.CONTENSIS_CLIENT_ID }}
+          shared-secret: ${{ env.CONTENSIS_SHARED_SECRET }}
+          image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
