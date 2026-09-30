@@ -49,9 +49,9 @@ jobs:
       - name: Push block to Contensis
         uses: contensis/block-push@v1
         with:
-          alias: automotron
-          project-id: svelteTest
-          block-id: sveltekit-app
+          alias: concept
+          project-id: concept
+          block-id: block-concept-concept-website
           image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
           release: true
           client-id: ${{ secrets.CONTENSIS_CLIENT_ID }}
