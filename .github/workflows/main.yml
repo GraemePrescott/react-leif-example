@@ -1,6 +1,5 @@
 // GitHub WorkFlow
-
-  env:
+env:
     REGISTRY: ghcr.io
     APP_IMAGE: ghcr.io/${{ github.repository }}/${{ github.ref_name }}/app
     CONTENSIS_CLIENT_ID: 1989f720-d4a3-46f7-b5e3-5553336af197
