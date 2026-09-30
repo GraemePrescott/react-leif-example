@@ -40,5 +40,5 @@ jobs:
           block-id: sveltekit-app
           image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
           release: true
-          client-id: ${{ secrets.1989f720-d4a3-46f7-b5e3-5553336af197 }}
-          shared-secret: ${{ secrets.42d9a16bc71c4515a91905d0f441d4ac-7b9565defa5f46bfba90357138048f9e-59690b67419f4b9f9e78c8b36cf1d70d }}
+          client-id: ${{ secrets.CONTENSIS_CLIENT_ID }}
+          shared-secret: ${{ secrets.CONTENSIS_SHARED_SECRET }}
